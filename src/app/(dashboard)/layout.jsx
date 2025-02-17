@@ -1,4 +1,12 @@
+import Sidebar from "@/components/SideBar";
 import "../../styles/globals.css";
+import { StyledEngineProvider } from "@mui/material";
+import { Comfortaa } from "next/font/google";
+
+const comfortaa = Comfortaa({
+  subsets: ["latin"],
+});
+
 
 export const metadata = {
   title: "dashboard",
@@ -8,10 +16,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="fixed overflow-hidden">
-        <main className={`w-screen grid grid-cols-5 fixed lg:static top-0`}>
-          <aside className={`col-span-1 h-screen row-start-1`}>menu</aside>
-          <main className="col-span-4 row-start-1">
+      <StyledEngineProvider injectFirst>
+      <body className={`${comfortaa.className} fixed overflow-hidden`}>
+        <main className={`w-screen grid grid-cols-6 fixed lg:static top-0`}>
+          <aside className={`col-span-1 h-screen row-start-1`}><Sidebar/></aside>
+          <main className="col-span-5 row-start-1">
             <header className="w-full col-span-1 px-2 py-2 h-12 sticky top-0">
               header
             </header>
@@ -23,6 +32,7 @@ export default function RootLayout({ children }) {
           </main>
         </main>
       </body>
+      </StyledEngineProvider>
     </html>
   );
 }
