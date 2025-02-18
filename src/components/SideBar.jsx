@@ -56,7 +56,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <section className="pl-7 pt-10">
+    <section className="px-5 pt-5">
       <article
         className={`pl-5 overflow-hidden flex ${
           menu ? "justify-between" : "justify-center"
