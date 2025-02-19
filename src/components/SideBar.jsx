@@ -85,7 +85,7 @@ const Sidebar = () => {
                 } hover:bg-primary-100 hover:text-primary-800 dark:hover:bg-primary-800 dark:hover:text-primary-100 hover:shadow-none rounded-lg shadow-none text-black dark:text-white capitalize`}
               >
                 {i.icon}
-                <span className={`${!menu && "hidden"} text-sm`}>
+                <span className={`${!menu && "hidden"} text-sm font-semibold`}>
                   {i.title}
                 </span>
               </IconButton>

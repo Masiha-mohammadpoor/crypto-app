@@ -1,10 +1,10 @@
 import Sidebar from "@/components/SideBar";
 import "../../styles/globals.css";
 import { StyledEngineProvider } from "@mui/material";
-import { Comfortaa } from "next/font/google";
+import { Karla } from "next/font/google";
 import Header from "@/components/Header";
 
-const comfortaa = Comfortaa({
+const karla = Karla({
   subsets: ["latin"],
 });
 
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <StyledEngineProvider injectFirst>
-      <body className={`${comfortaa.className} fixed overflow-hidden`}>
+      <body className={`${karla.className} fixed overflow-hidden`}>
         <main className={`w-screen grid grid-cols-6 fixed lg:static top-0`}>
           <aside className={`col-span-1 h-screen row-start-1`}><Sidebar/></aside>
           <main className="col-span-5 row-start-1">
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
               <Header/>
             </header>
             <section className="bg-gray-100 w-full mt-3 h-screen col-span-1 rounded-t-xl pb-40 overflow-x-hidden overflow-y-auto sticky top-16">
-              <section className="w-full rounded-t-xl pt-5 px-10 overflow-y-auto ">
+              <section className="w-full rounded-t-xl pt-5 px-5 overflow-y-auto ">
                 {children}
               </section>
             </section>
