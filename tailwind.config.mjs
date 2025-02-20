@@ -11,6 +11,7 @@ export default {
     extend: {
       colors: {
         primary: colors.violet,
+        bgColor : colors.gray
       },
     },
   },
