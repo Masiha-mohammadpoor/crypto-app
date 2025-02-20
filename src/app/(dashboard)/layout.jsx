@@ -19,14 +19,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <StyledEngineProvider injectFirst>
       <body className={`${karla.className} fixed overflow-hidden`}>
-        <main className={`w-screen grid grid-cols-6 fixed lg:static top-0`}>
+        <main className="w-screen grid grid-cols-6 fixed lg:static top-0">
           <aside className={`col-span-1 h-screen row-start-1`}><Sidebar/></aside>
           <main className="col-span-5 row-start-1">
             <header className="w-full col-span-1 px-2 h-12 sticky top-0">
               <Header/>
             </header>
-            <section className="bg-bgColor-200 w-full mt-3 h-screen col-span-1 rounded-t-xl pb-40 overflow-x-hidden overflow-y-auto sticky top-16">
-              <section className="w-full rounded-t-xl pt-5 px-5 overflow-y-auto ">
+            <section className="bg-bgColor-200 w-full mt-3 h-screen col-span-1 rounded-t-xl pb-40 overflow-x-hidden sticky top-16">
+              <section className="w-full rounded-t-xl pt-5 px-5 overflow-y-auto pb-20">
                 {children}
               </section>
             </section>
